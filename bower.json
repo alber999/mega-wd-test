@@ -1,0 +1,26 @@
+{
+    "name": "mega-wd-test",
+    "description": "MEGA web development test implementation by Alberto Galiana",
+    "authors": [
+        "Alberto Galiana <galiana.alberto@gmail.com>"
+    ],
+    "license": "ISC",
+    "homepage": "https://github.com/alber999/mega-wd-test",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "tweetnacl-util": "^0.15.1",
+        "crypto-js": "^4.1.1",
+        "tweetnacl": "^1.0.3",
+        "jquery": "^3.6.0",
+        "jquery-modal": "^0.9.1"
+    },
+    "resolutions": {
+        "jquery": "~3.6.0"
+    }
+}

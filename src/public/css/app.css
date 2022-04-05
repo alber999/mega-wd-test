@@ -1,0 +1,269 @@
+@font-face {
+    font-family: SourceSansPro-Regular;
+    src: url("/fonts/SourceSansPro/SourceSansPro-Regular.otf") format("opentype");
+    font-display: swap;
+}
+
+body {
+    margin-top: 40px;
+    background-color: #484848;
+    font-family: SourceSansPro-Regular;
+    font-size: 18px;
+}
+
+label {
+    display: block;
+    margin-top: 32px;
+}
+
+input {
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: .3s border-color;
+}
+
+button {
+    font-size: 14px;
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px 28px;
+    border: none;
+    background-color: #fafafa;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #bababa;
+}
+
+progress {
+    color: #56f1b6;
+    background-color: #545454;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #545454;
+    border-radius: 100px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #56f1b6 !important;
+}
+
+progress[value] {
+    width: 250px;
+    height: 20px;
+    background: none;
+    border: 0;
+    border-radius: 50px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #56f1b6 !important;
+    border-radius: 100px;
+}
+
+progress.progress-canceled {
+    color: #f15656;
+}
+
+progress.progress-canceled::-moz-progress-bar {
+    background-color: #f15656 !important;
+}
+
+progress.progress-canceled::-webkit-progress-value {
+    background-color: #f15656 !important;
+    border-radius: 100px;
+}
+
+.upload-wrapper {
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+.upload-wrapper-section:nth-of-type(1) {
+    flex-grow: 0;
+    border-radius: 15px 0 0 15px;
+    padding: 40px;
+    color: #000;
+    background-color: #fff;
+}
+
+.upload-wrapper-section:nth-of-type(2) {
+    flex: 9;
+    padding-right: 24px;
+    background-color: #575757;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+}
+
+.title {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.separator {
+    border-bottom: 2px solid #e5e5e5;
+    margin-top: 4px;
+}
+
+.separator--form {
+    margin-top: 32px;
+}
+
+#password {
+    width: 250px;
+}
+
+#togglePassword {
+    display: inline-block;
+    position: absolute;
+    margin: -38px 0 0 230px;
+    cursor: pointer;
+}
+
+#file-input {
+    width: 250px;
+}
+
+ul.upload-progress {
+    list-style-type: none;
+}
+
+ul.upload-progress li {
+    height: 100%;
+    display: block;
+    border-radius: 8px;
+    margin: 12px 0 0 0;
+    background-color: #434343;
+    padding: 0 22px;
+}
+
+ul.upload-progress li span {
+    line-height: 50px;
+}
+
+ul.upload-progress li span:nth-child(1) {
+    width: 100px;
+}
+
+ul.upload-progress li span:nth-child(2) {
+    width: 40px;
+}
+
+ul.upload-progress li span:nth-child(3) {
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+ul.upload-progress li span:nth-child(4) {
+    width: 250px;
+}
+
+.hidden {
+    display: none;
+}
+
+.notification {
+    border-radius: 10px;
+    margin: 10px 0px;
+    padding: 8px;
+}
+
+.notification--error {
+    font-size: 14px;
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+#button-layout {
+    padding: 0;
+    margin: 12px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+.button-layout-item {
+    margin-right: 12px;
+}
+
+.button-layout-item:last-child {
+    flex: 1;
+    margin: 0;
+}
+
+.button-layout-item:last-child button {
+    width: 100%;
+}
+
+#preload {
+    visibility: hidden;
+}
+
+.image-button {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 4px 8px 4px 8px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: 7px;
+    cursor: pointer;
+}
+
+.image-button--cancel {
+    background-image: url(/images/button/cancel.png);
+}
+
+.image-button--reupload {
+    background-image: url(/images/button/reupload.png);
+}
+
+.image-status {
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 4px 8px 4px 8px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+}
+
+.image-status--success {
+    background-image: url(/images/status/success.png);
+}
+
+.image-status--canceled {
+    background-image: url(/images/status/canceled.png);
+}
+
+.image-status--loading {
+    background-image: url(/images/status/loading.gif);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alberto Galiana MEGA test</title>
+    <meta name="description" content="MEGA web development test implementation by Alberto Galiana">
+
+    <link rel="stylesheet" href="bower_components/jquery-modal/jquery.modal.min.css" media="screen" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" media="screen" />
+    <link rel="stylesheet" href="css/app.css" media="screen" />
+    <link rel="stylesheet" href="css/modal.css" media="screen" />
+</head>
+
+<body>
+    <div class="upload-wrapper">
+        <div class="upload-wrapper-section">
+            <span class="title">File Upload</span>
+            <div class="separator"></div>
+            <label>Enter Password to Encrypt Files</label>
+            <input id="password" type="password" placeholder="Enter Password" maxlength="25" />
+            <i class="far fa-eye" id="togglePassword"></i>
+            <div id="password-error" class="hidden notification notification--error"></div>
+            <div class="separator separator--form"></div>
+            <label>Upload File</label>
+            <input id="file-button" type="file" class="hidden" />
+            <input id="file-input" type="text" placeholder="Click browse to select a file to upload" disabled/>
+            <div id="upload-error" class="hidden notification notification--error"></div>
+            <div id="button-layout">
+                <div class="button-layout-item">
+                    <button id="browse-button">Browse</button>
+                </div>
+                <div class="button-layout-item">
+                    <button class="button-layout-item" id="upload-button">UPLOAD</button>
+                </div>
+            </div>
+        </div>
+        <div class="upload-wrapper-section">
+            <ul class="upload-progress"></ul>
+        </div>
+
+    </div>
+
+    <div class="modal"></div>
+
+    <div id="preload">
+        <div class="image-button--cancel"></div>
+        <div class="image-button--reupload"></div>
+        <div class="image-status--loading"></div>
+        <div class="image-status--success"></div>
+        <div class="image-status--canceled"></div>
+    </div>
+
+    <script defer type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script defer type="text/javascript" src="bower_components/jquery-modal/jquery.modal.min.js"></script>
+    <script defer type="text/javascript" src="bower_components/crypto-js/crypto-js.js"></script>
+    <script defer type="text/javascript" src="bower_components/tweetnacl/nacl.min.js"></script>
+    <script defer type="text/javascript" src="bower_components/tweetnacl-util/nacl-util.min.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/asmCrypto/0.22.0/asmcrypto.min.js"></script>
+
+    <script defer type="text/javascript" src="js/auth/auth-headers.builder.js"></script>
+    <script defer type="text/javascript" src="js/config/upload.config.js"></script>
+    <script defer type="text/javascript" src="js/controller/upload.controller.js"></script>
+    <script defer type="text/javascript" src="js/error/file-validation.error.js"></script>
+    <script defer type="text/javascript" src="js/error/password-validation.error.js"></script>
+    <script defer type="text/javascript" src="js/file/file-request-settings.builder.js"></script>
+    <script defer type="text/javascript" src="js/file/file-update-request-settings.js"></script>
+    <script defer type="text/javascript" src="js/form/form.validator.js"></script>
+    <script defer type="text/javascript" src="js/otp/otp-request-settings.builder.js"></script>
+    <script defer type="text/javascript" src="js/process/process.js"></script>
+    <script defer type="text/javascript" src="js/process/process.path.js"></script>
+    <script defer type="text/javascript" src="js/request/request-settings.js"></script>
+    <script defer type="text/javascript" src="js/util/crypto.util.js"></script>
+    <script defer type="text/javascript" src="js/util/date.util.js"></script>
+    <script defer type="text/javascript" src="js/util/uuid.util.js"></script>
+    <script defer type="text/javascript" src="js/app.js"></script>
+
+    <noscript>
+        Please enable Javascript in your browser
+    </noscript>
+</body>
+
+</html>
